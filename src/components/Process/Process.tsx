@@ -3,20 +3,21 @@
 import { motion } from 'framer-motion';
 import styles from './Process.module.css';
 
-const processSteps = [
-    { id: 1, title: 'Онлайн или оффлайн консультации', desc: 'Свяжитесь с нами для первичного обсуждения.' },
-    { id: 2, title: 'Оформление договоров и документы', desc: 'Юридическое закрепление партнерства.' },
-    { id: 3, title: 'Добавление зарядной станции на платформу', desc: 'Интеграция вашей станции в нашу систему.' },
-    { id: 4, title: 'Продвигаем вашу зарядную станцию', desc: 'Доносим информацию до водителей EV.' },
-    { id: 5, title: 'Пользователи начинают заряжаться', desc: 'Первые клиенты на ваших станциях.' },
-    { id: 6, title: 'Начните получать пассивный доход', desc: 'Удобный вывод средств в любой момент.' },
-    { id: 7, title: 'Постоянная поддержка со стороны Charge-One', desc: 'Техническое обслуживание и обновления.' }
-];
+export default function Process({ dict }: { dict: any }) {
+    const steps = [
+        { num: '01', title: dict.process.s1Title, desc: dict.process.s1Desc },
+        { num: '02', title: dict.process.s2Title, desc: dict.process.s2Desc },
+        { num: '03', title: dict.process.s3Title, desc: dict.process.s3Desc },
+        { num: '04', title: dict.process.s4Title, desc: dict.process.s4Desc },
+        { num: '05', title: dict.process.s5Title, desc: dict.process.s5Desc },
+        { num: '06', title: dict.process.s6Title, desc: dict.process.s6Desc },
+        { num: '07', title: dict.process.s7Title, desc: dict.process.s7Desc },
+    ];
 
-export default function Process() {
     return (
         <section id="process" className={styles.process}>
-            <div className={`container`}>
+            <div className={styles.bgGlow}></div>
+            <div className={`container ${styles.container}`}>
                 <div className={styles.header}>
                     <motion.div
                         className={styles.label}
@@ -24,7 +25,7 @@ export default function Process() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        ПРОЦЕСС
+                        {dict.process.label}
                     </motion.div>
                     <motion.h2
                         className={styles.title}
@@ -32,24 +33,29 @@ export default function Process() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Процесс работы с Charge-One
+                        {dict.process.title}
                     </motion.h2>
                 </div>
 
-                <div className={styles.stepsContainer}>
-                    {processSteps.map((step, index) => (
+                <div className={styles.timeline}>
+                    {steps.map((step, index) => (
                         <motion.div
-                            key={step.id}
-                            className={styles.stepCard}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            key={index}
+                            className={`${styles.step} ${index % 2 === 0 ? styles.stepLeft : styles.stepRight}`}
+                            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ type: "spring", duration: 0.8, bounce: 0.3, delay: index * 0.1 }}
                         >
-                            <div className={styles.stepNumber}>{step.id}</div>
                             <div className={styles.stepContent}>
-                                <h4 className={styles.stepTitle}>{step.title}</h4>
-                                <p className={styles.stepDesc}>{step.desc}</p>
+                                <div className={styles.numBox}>{step.num}</div>
+                                <div className={styles.textBox}>
+                                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                                    <p className={styles.stepDesc}>{step.desc}</p>
+                                </div>
+                            </div>
+                            <div className={styles.stepConnector}>
+                                <div className={styles.connectorDot}></div>
                             </div>
                         </motion.div>
                     ))}

@@ -43,67 +43,182 @@
     color: var(--text-main);
 }
 
-.stepsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+.timeline {
     position: relative;
-    z-index: 10;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.stepCard {
-    width: calc(33.333% - 1rem);
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(99, 102, 241, 0),
+            rgba(99, 102, 241, 0.3) 10%,
+            rgba(99, 102, 241, 0.3) 90%,
+            rgba(99, 102, 241, 0));
+}
+
+.step {
+    position: relative;
+    width: 50%;
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.stepLeft {
+    left: 0;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.stepRight {
+    left: 50%;
+    justify-content: flex-start;
+    padding-left: 3rem;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.stepContent {
     background-color: var(--surface);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
     border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    gap: 1rem;
 }
 
-.stepCard:hover {
+.stepContent:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: #6366f1;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
-.stepNumber {
-    font-size: 2rem;
+.numBox {
+    font-size: 2.5rem;
     font-weight: 800;
-    color: #6366f1;
-    opacity: 0.8;
-    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(99, 102, 241, 0.5);
+    margin-bottom: -1rem;
+    opacity: 0.5;
+}
+
+.stepContent:hover .numBox {
+    color: rgba(99, 102, 241, 0.1);
+    -webkit-text-stroke: 1px #6366f1;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .stepTitle {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
 .stepDesc {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-@media (max-width: 1024px) {
-    .stepCard {
-        width: calc(50% - 1rem);
-        /* 2 columns */
+.stepConnector {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 2px;
+    background-color: rgba(99, 102, 241, 0.3);
+}
+
+.stepLeft .stepConnector {
+    right: 0;
+}
+
+.stepRight .stepConnector {
+    left: 0;
+}
+
+.connectorDot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--surface);
+    border: 4px solid #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.stepLeft .connectorDot {
+    right: -8px;
+}
+
+.stepRight .connectorDot {
+    left: -8px;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 2rem;
     }
-}
 
-@media (max-width: 640px) {
-    .stepCard {
+    .step {
         width: 100%;
-        /* 1 column */
+        margin-bottom: 2rem;
+    }
+
+    .stepLeft,
+    .stepRight {
+        left: 0;
+        justify-content: flex-start;
+        padding-left: 4.5rem;
+        padding-right: 1rem;
+    }
+
+    .stepConnector {
+        width: 2.5rem;
+        left: 2rem;
+        /* Start exactly at the line */
+    }
+
+    .stepLeft .stepConnector {
+        right: auto;
+    }
+
+    .stepRight .stepConnector {
+        left: 2rem;
+    }
+
+    .connectorDot {
+        left: 0;
+        /* Align dot on the left side / line */
+    }
+
+    .stepLeft .connectorDot {
+        right: auto;
     }
 }

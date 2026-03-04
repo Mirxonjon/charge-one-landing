@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Zap } from 'lucide-react';
 import styles from './Hero.module.css';
 
-export default function Hero() {
+export default function Hero({ dict }: { dict: any }) {
     return (
         <section className={styles.hero}>
             <div className={styles.backgroundGlow}></div>
@@ -22,7 +22,7 @@ export default function Hero() {
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
                         <Zap size={16} className={styles.badgeIcon} />
-                        <span>Платформа №1 в Узбекистане</span>
+                        <span>{dict.hero.badge}</span>
                     </motion.div>
 
                     <motion.h1
@@ -31,7 +31,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
                     >
-                        Объедините свои <span className={styles.highlight}>зарядные станции</span> в одну умную сеть.
+                        {dict.hero.title1}<span className={styles.highlight}>{dict.hero.titleHighlight}</span>{dict.hero.title2}
                     </motion.h1>
 
                     <motion.p
@@ -40,9 +40,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
-                        Привлекайте больше клиентов, управляйте бизнесом легко
-                        и получайте пассивный доход. Современное решение
-                        для владельцев EV станций.
+                        {dict.hero.desc}
                     </motion.p>
 
                     <motion.div
@@ -52,11 +50,11 @@ export default function Hero() {
                         transition={{ delay: 0.5, duration: 0.6 }}
                     >
                         <button className={styles.primaryBtn}>
-                            Начать работу
+                            {dict.hero.startBtn}
                             <ArrowRight size={20} />
                         </button>
                         <button className={styles.secondaryBtn}>
-                            Узнать больше
+                            {dict.hero.moreBtn}
                         </button>
                     </motion.div>
                 </motion.div>
@@ -71,16 +69,16 @@ export default function Hero() {
                         <div className={styles.mockupCard}>
                             <div className={styles.mockupHeader}>
                                 <div className={styles.mockupLogo}></div>
-                                <span>Charge-One Panel</span>
+                                <span>{dict.hero.mockupTitle}</span>
                             </div>
                             <div className={styles.mockupBody}>
                                 <div className={styles.statBox}>
-                                    <div className={styles.statLabel}>Доход за месяц</div>
-                                    <div className={styles.statValue}>+ 42%</div>
+                                    <div className={styles.statLabel}>{dict.hero.stat1Label}</div>
+                                    <div className={styles.statValue}>{dict.hero.stat1Value}</div>
                                 </div>
                                 <div className={styles.statBox}>
-                                    <div className={styles.statLabel}>Новые клиенты</div>
-                                    <div className={styles.statValue}>+ 128</div>
+                                    <div className={styles.statLabel}>{dict.hero.stat2Label}</div>
+                                    <div className={styles.statValue}>{dict.hero.stat2Value}</div>
                                 </div>
                                 <div className={styles.chartPlaceholder}></div>
                             </div>
@@ -99,7 +97,7 @@ export default function Hero() {
                             animate={{ y: [0, 15, 0] }}
                             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
                         >
-                            ✅ Станция онлайн
+                            {dict.hero.stationOnline}
                         </motion.div>
                     </div>
                 </motion.div>

@@ -9,7 +9,7 @@ const textAnimations = {
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
 };
 
-export default function Clients() {
+export default function Clients({ dict }: { dict: any }) {
     return (
         <section id="clients" className={styles.clients}>
             <div className={`container`}>
@@ -20,7 +20,7 @@ export default function Clients() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        ПРИЛОЖЕНИЕ
+                        {dict.clients.label}
                     </motion.div>
                     <motion.h2
                         className={styles.title}
@@ -28,7 +28,7 @@ export default function Clients() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Что ждет моих клиентов?
+                        {dict.clients.title}
                     </motion.h2>
                 </div>
 
@@ -36,27 +36,27 @@ export default function Clients() {
                     <div className={styles.featuresList}>
                         <motion.div className={styles.featureItem} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={textAnimations} custom={0}>
                             <div className={styles.iconWrapperBlue}><MapPin size={20} className={styles.iconBlue} /></div>
-                            <span>Все зарядные станции в одном месте</span>
+                            <span>{dict.clients.f1}</span>
                         </motion.div>
 
                         <motion.div className={styles.featureItem} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ ...textAnimations, visible: { ...textAnimations.visible, transition: { delay: 0.1 } } }}>
                             <div className={styles.iconWrapperBlue}><Wallet size={20} className={styles.iconBlue} /></div>
-                            <span>Никаких изнурительных депозитов для зарядки</span>
+                            <span>{dict.clients.f2}</span>
                         </motion.div>
 
                         <motion.div className={styles.featureItem} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ ...textAnimations, visible: { ...textAnimations.visible, transition: { delay: 0.2 } } }}>
                             <div className={styles.iconWrapperBlue}><Zap size={20} className={styles.iconBlue} /></div>
-                            <span>Возможность заряжать электромобиль со скидкой</span>
+                            <span>{dict.clients.f3}</span>
                         </motion.div>
 
                         <motion.div className={styles.featureItem} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ ...textAnimations, visible: { ...textAnimations.visible, transition: { delay: 0.3 } } }}>
                             <div className={styles.iconWrapperBlue}><ShieldCheck size={20} className={styles.iconBlue} /></div>
-                            <span>Приобретайте выгодные пакеты киловатт у оператора</span>
+                            <span>{dict.clients.f4}</span>
                         </motion.div>
 
                         <motion.div className={styles.featureItem} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ ...textAnimations, visible: { ...textAnimations.visible, transition: { delay: 0.4 } } }}>
                             <div className={`${styles.iconWrapperBlue} ${styles.iconWrapperGray}`}><div className={styles.plusIcon}>+</div></div>
-                            <span>И многое другое скоро появится от Charge-One</span>
+                            <span>{dict.clients.f5}</span>
                         </motion.div>
                     </div>
 
@@ -83,7 +83,7 @@ export default function Clients() {
                                     <div className={styles.bottomSheet}>
                                         <div className={styles.sheetHandle}></div>
                                         <div className={styles.sheetTitle}>Charge-One Station #42</div>
-                                        <div className={styles.sheetSubtitle}>г. Ташкент, ул. Амира Темура</div>
+                                        <div className={styles.sheetSubtitle}>{dict.clients.mockSubtitle}</div>
                                         <div className={styles.connectors}>
                                             <div className={styles.connector}>
                                                 <div className={styles.connIcon}></div>
@@ -91,10 +91,10 @@ export default function Clients() {
                                                     <div className={styles.connType}>GBT DC</div>
                                                     <div className={styles.connPower}>120 kW</div>
                                                 </div>
-                                                <div className={styles.connStatus}>Свободен</div>
+                                                <div className={styles.connStatus}>{dict.clients.mockStatus}</div>
                                             </div>
                                         </div>
-                                        <button className={styles.chargeBtn}>Начать зарядку</button>
+                                        <button className={styles.chargeBtn}>{dict.clients.mockBtn}</button>
                                     </div>
                                 </div>
                             </div>
@@ -107,8 +107,8 @@ export default function Clients() {
                             >
                                 <div className={styles.floatIcon}><Zap size={16} color="var(--primary)" /></div>
                                 <div className={styles.floatText}>
-                                    <div className={styles.floatTitle}>Spectre</div>
-                                    <div className={styles.floatDesc}>Баланс: 150 000 UZS</div>
+                                    <div className={styles.floatTitle}>{dict.clients.mockBalanceTitle}</div>
+                                    <div className={styles.floatDesc}>{dict.clients.mockBalanceDesc}</div>
                                 </div>
                             </motion.div>
 
@@ -119,8 +119,8 @@ export default function Clients() {
                             >
                                 <div className={styles.avatarMock}></div>
                                 <div className={styles.floatText}>
-                                    <div className={styles.floatTitle}>Служба поддержки</div>
-                                    <div className={styles.floatDesc}>Вам ответили в чате</div>
+                                    <div className={styles.floatTitle}>{dict.clients.mockSupportTitle}</div>
+                                    <div className={styles.floatDesc}>{dict.clients.mockSupportDesc}</div>
                                 </div>
                             </motion.div>
                         </div>

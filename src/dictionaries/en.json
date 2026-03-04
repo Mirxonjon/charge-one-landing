@@ -1,0 +1,92 @@
+{
+    "nav": {
+        "advantages": "Advantages",
+        "clients": "For Clients",
+        "partners": "Partnership",
+        "process": "Process",
+        "login": "Login"
+    },
+    "hero": {
+        "badge": "No.1 Platform in Uzbekistan",
+        "title1": "Unite your ",
+        "titleHighlight": "charging stations",
+        "title2": " into one smart network.",
+        "desc": "Attract more clients, manage your business easily, and earn passive income. A modern solution for EV station owners.",
+        "startBtn": "Get Started",
+        "moreBtn": "Learn More",
+        "mockupTitle": "Charge-One Panel",
+        "stat1Label": "Monthly Income",
+        "stat1Value": "+ 42%",
+        "stat2Label": "New Clients",
+        "stat2Value": "+ 128",
+        "stationOnline": "✅ Station Online"
+    },
+    "features": {
+        "label": "ADVANTAGES",
+        "title": "Key Advantages for Your Network",
+        "card1Title": "No need to develop your own app",
+        "card1Desc": "Developing your own app requires significant resources that are better spent on expanding your station network.",
+        "card2Title": "No more need for marketing campaigns",
+        "card2Desc": "We gathered all EV stations on one platform, providing drivers with a single source of truth and boosting your sales.",
+        "card3Title": "Easily manage your business with our panel",
+        "card3Desc": "You are in control! Set prices, create custom tariffs, track transactions, and apply discounts through the partner panel.",
+        "card4Title": "No Call Center or IT Department Required",
+        "card4Desc": "Charge-One has you covered! Building your own IT department can be unprofitable for small networks.",
+        "card5Title": "Create your own kilowatt packages for annual sales",
+        "card5Desc": "Offer attractive packages with a few clicks, receiving large payments upfront from users.",
+        "newBadge": "New"
+    },
+    "clients": {
+        "label": "THE APP",
+        "title": "What awaits my clients?",
+        "f1": "All charging stations in one place",
+        "f2": "No exhausting deposits for charging",
+        "f3": "Ability to charge EVs with a discount",
+        "f4": "Purchase profitable kilowatt packages from the operator",
+        "f5": "And much more coming soon from Charge-One",
+        "mockSubtitle": "Tashkent, Amir Temur avenue",
+        "mockStatus": "Available",
+        "mockBtn": "Start Charging",
+        "mockBalanceTitle": "Spectre",
+        "mockBalanceDesc": "Balance: 150 000 UZS",
+        "mockSupportTitle": "Support Service",
+        "mockSupportDesc": "Support answered in chat"
+    },
+    "partners": {
+        "label": "PARTNERSHIP",
+        "title": "Partnership Types",
+        "directTitle": "Direct Partnership",
+        "directDesc": "Add your charging station to Charge-One, and users will be able to charge their EVs at your stations using our app.",
+        "indirectTitle": "Indirect Partnership",
+        "indirectDesc": "Add your charging station to Charge-One to advertise your charging point and attract more clients to your location."
+    },
+    "process": {
+        "label": "PROCESS",
+        "title": "Working process with Charge-One",
+        "s1Title": "Online or Offline Consultation",
+        "s1Desc": "Contact us for an initial discussion.",
+        "s2Title": "Contracts and Documents",
+        "s2Desc": "Legal consolidation of the partnership.",
+        "s3Title": "Adding the station to the platform",
+        "s3Desc": "Integration of your station into our system.",
+        "s4Title": "Promoting your station",
+        "s4Desc": "Delivering information to EV drivers.",
+        "s5Title": "Users start charging",
+        "s5Desc": "First clients arrive at your stations.",
+        "s6Title": "Start receiving passive income",
+        "s6Desc": "Convenient withdrawal of funds at any time.",
+        "s7Title": "Constant support from Charge-One",
+        "s7Desc": "Technical maintenance and updates."
+    },
+    "footer": {
+        "desc": "Innovative EV charging network. We turn your station into a source of stable income.",
+        "navTitle": "Navigation",
+        "docsTitle": "Documents",
+        "contactTitle": "Contacts",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "offer": "Public Offer",
+        "requisites": "Requisites",
+        "rights": "Charge-One. All rights reserved."
+    }
+}

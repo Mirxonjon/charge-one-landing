@@ -9,7 +9,7 @@ const animations = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
-export default function Features() {
+export default function Features({ dict }: { dict: any }) {
     return (
         <section id="advantages" className={styles.features}>
             <div className={`container`}>
@@ -21,7 +21,7 @@ export default function Features() {
                         viewport={{ once: true }}
                         variants={animations}
                     >
-                        ПРЕИМУЩЕСТВА
+                        {dict.features.label}
                     </motion.div>
                     <motion.h2
                         className={styles.title}
@@ -30,7 +30,7 @@ export default function Features() {
                         viewport={{ once: true }}
                         variants={{ ...animations, visible: { ...animations.visible, transition: { delay: 0.1, duration: 0.6 } } }}
                     >
-                        Ключевые преимущества для вашей сети
+                        {dict.features.title}
                     </motion.h2>
                 </div>
 
@@ -46,9 +46,9 @@ export default function Features() {
                         <div className={styles.iconWrapper}>
                             <LayoutGrid size={24} className={styles.icon} />
                         </div>
-                        <h3 className={styles.cardTitle}>Нет необходимости разрабатывать собственное приложение</h3>
+                        <h3 className={styles.cardTitle}>{dict.features.card1Title}</h3>
                         <p className={styles.cardDesc}>
-                            Разработка своего приложения потребует значительных ресурсов, которые лучше потратить на расширение сети станций.
+                            {dict.features.card1Desc}
                         </p>
                     </motion.div>
 
@@ -63,9 +63,9 @@ export default function Features() {
                         <div className={styles.iconWrapper}>
                             <TrendingUp size={24} className={styles.icon} />
                         </div>
-                        <h3 className={styles.cardTitle}>Больше нет необходимости в маркетинговых кампаниях</h3>
+                        <h3 className={styles.cardTitle}>{dict.features.card2Title}</h3>
                         <p className={styles.cardDesc}>
-                            Мы собрали в платформу все станции для электромобилей, предоставив водителям единый источник информации и увеличив ваши продажи.
+                            {dict.features.card2Desc}
                         </p>
                     </motion.div>
 
@@ -82,9 +82,9 @@ export default function Features() {
                                 <Users size={64} className={styles.placeholderIcon} />
                             </div>
                         </div>
-                        <h3 className={styles.cardTitle}>Легко управляйте своим бизнесом с помощью нашей панели</h3>
+                        <h3 className={styles.cardTitle}>{dict.features.card3Title}</h3>
                         <p className={styles.cardDesc}>
-                            Вы все контролируете! Устанавливайте цены, создавайте индивидуальные тарифы, отслеживайте транзакции и применяйте скидки через панель партнеров.
+                            {dict.features.card3Desc}
                         </p>
                     </motion.div>
 
@@ -99,9 +99,9 @@ export default function Features() {
                         <div className={styles.cardImageSmall}>
                             <ShieldCheck size={40} className={styles.placeholderIcon} />
                         </div>
-                        <h3 className={styles.cardTitle}>Не требуется колл-центр или ИТ-отдел</h3>
+                        <h3 className={styles.cardTitle}>{dict.features.card4Title}</h3>
                         <p className={styles.cardDesc}>
-                            Charge-One прикрывает все! Создание собственного ИТ-отдела может быть нерентабельным для небольших сетей.
+                            {dict.features.card4Desc}
                         </p>
                     </motion.div>
 
@@ -117,11 +117,11 @@ export default function Features() {
                             <div className={styles.iconWrapperRed}>
                                 <Zap size={20} className={styles.iconRed} />
                             </div>
-                            <span className={styles.newTag}>Новый</span>
+                            <span className={styles.newTag}>{dict.features.newBadge}</span>
                         </div>
-                        <h3 className={styles.cardTitle}>Создайте свои пакеты киловатт и обеспечьте ежегодные продажи</h3>
+                        <h3 className={styles.cardTitle}>{dict.features.card5Title}</h3>
                         <p className={styles.cardDesc}>
-                            Привлекательные пакеты с помощью нескольких кликов, получая сразу большие суммы от пользователей.
+                            {dict.features.card5Desc}
                         </p>
                     </motion.div>
                 </div>

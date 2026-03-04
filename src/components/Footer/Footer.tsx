@@ -1,10 +1,8 @@
-'use client';
-
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Instagram, Facebook, Send } from 'lucide-react';
+import { Instagram, Send, MoveUpRight, MapPin, Phone, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer({ dict }: { dict: any }) {
     return (
         <footer className={styles.footer}>
             <div className={`container`}>
@@ -15,15 +13,11 @@ export default function Footer() {
                             <span className={styles.logoText}>Charge-One</span>
                         </Link>
                         <p className={styles.brandDesc}>
-                            Инновационная сеть зарядных станций для электромобилей.
-                            Превращаем вашу станцию в источник стабильного дохода.
+                            {dict.footer.desc}
                         </p>
                         <div className={styles.socialLinks}>
                             <a href="#" className={styles.socialLink} aria-label="Instagram">
                                 <Instagram size={20} />
-                            </a>
-                            <a href="#" className={styles.socialLink} aria-label="Facebook">
-                                <Facebook size={20} />
                             </a>
                             <a href="#" className={styles.socialLink} aria-label="Telegram">
                                 <Send size={20} />
@@ -32,27 +26,27 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.linksCol}>
-                        <h4 className={styles.linksTitle}>Навигация</h4>
-                        <ul className={styles.linksList}>
-                            <li><Link href="#advantages">Преимущества</Link></li>
-                            <li><Link href="#clients">Для клиентов</Link></li>
-                            <li><Link href="#partners">Партнерство</Link></li>
-                            <li><Link href="#process">Процесс</Link></li>
+                        <h4 className={styles.colTitle}>{dict.footer.navTitle}</h4>
+                        <ul className={styles.linkList}>
+                            <li><Link href="#advantages">{dict.nav.advantages}</Link></li>
+                            <li><Link href="#clients">{dict.nav.clients}</Link></li>
+                            <li><Link href="#partners">{dict.nav.partners}</Link></li>
+                            <li><Link href="#process">{dict.nav.process}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.linksCol}>
-                        <h4 className={styles.linksTitle}>Документы</h4>
-                        <ul className={styles.linksList}>
-                            <li><a href="#">Политика конфиденциальности</a></li>
-                            <li><a href="#">Пользовательское соглашение</a></li>
-                            <li><a href="#">Договор оферты</a></li>
-                            <li><a href="#">Реквизиты</a></li>
+                        <h4 className={styles.colTitle}>{dict.footer.docsTitle}</h4>
+                        <ul className={styles.linkList}>
+                            <li><Link href="/privacy">{dict.footer.privacy} <MoveUpRight size={12} /></Link></li>
+                            <li><Link href="/terms">{dict.footer.terms} <MoveUpRight size={12} /></Link></li>
+                            <li><Link href="/offer">{dict.footer.offer} <MoveUpRight size={12} /></Link></li>
+                            <li><Link href="/requisites">{dict.footer.requisites} <MoveUpRight size={12} /></Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.contactCol}>
-                        <h4 className={styles.linksTitle}>Контакты</h4>
+                        <h4 className={styles.colTitle}>{dict.footer.contactTitle}</h4>
                         <ul className={styles.contactList}>
                             <li>
                                 <MapPin size={18} className={styles.contactIcon} />
@@ -72,9 +66,8 @@ export default function Footer() {
 
                 <div className={styles.footerBottom}>
                     <div className={styles.copyright}>
-                        &copy; {new Date().getFullYear()} Charge-One. Все права защищены.
+                        &copy; {new Date().getFullYear()} {dict.footer.rights}
                     </div>
-                    <div className={styles.domain}>charge-one.com</div>
                 </div>
             </div>
         </footer>
