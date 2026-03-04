@@ -1,0 +1,133 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    z-index: 50;
+    box-shadow: var(--shadow-sm);
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logoIcon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.logoIcon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--header-bg);
+    border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink {
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.navLink:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loginBtn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: var(--transition);
+}
+
+.loginBtn:hover {
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-glow);
+}
+
+.langBtn {
+    color: var(--header-text);
+    font-size: 0.875rem;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.langBtn:hover {
+    opacity: 1;
+}
+
+.mobileMenuBtn {
+    display: none;
+    color: var(--header-text);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navOpen {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .langBtn {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: block;
+    }
+}

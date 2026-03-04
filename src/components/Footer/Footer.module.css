@@ -1,0 +1,165 @@
+.footer {
+    background-color: var(--header-bg);
+    /* Dark background */
+    color: var(--header-text);
+    padding: 5rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footerTop {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.brandCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.logoIcon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--header-bg);
+    border-radius: 50%;
+}
+
+.brandDesc {
+    color: #94a3b8;
+    /* Slate 400 */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.socialLink:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.linksTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.linksList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linksList a {
+    color: #94a3b8;
+    font-size: 0.9375rem;
+    transition: var(--transition);
+}
+
+.linksList a:hover {
+    color: var(--primary);
+    padding-left: 0.25rem;
+}
+
+.contactList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: #94a3b8;
+    font-size: 0.9375rem;
+}
+
+.contactList a {
+    transition: var(--transition);
+}
+
+.contactList a:hover {
+    color: var(--primary);
+}
+
+.contactIcon {
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #64748b;
+    /* Slate 500 */
+    font-size: 0.875rem;
+}
+
+.domain {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+    .footerTop {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .footerTop {
+        grid-template-columns: 1fr;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
