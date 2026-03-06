@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/private/'], // Add any paths you want to hide from search engines here
         },
-        sitemap: 'https://charge-one.com/sitemap.xml',
+        sitemap: 'https://charge-one.uz/sitemap.xml',
     };
 }

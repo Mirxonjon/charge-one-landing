@@ -19,7 +19,14 @@
         "stat1Value": "+ 42%",
         "stat2Label": "Новые клиенты",
         "stat2Value": "+ 128",
-        "stationOnline": "✅ Станция онлайн"
+        "stationOnline": "✅ Станция онлайн",
+        "tag1": "Добавьте в Charge-One",
+        "tag2": "Установите свою станцию",
+        "tag3": "Получайте оплату после каждой зарядки",
+        "appStore": "App Store",
+        "googlePlay": "Google Play",
+        "balance": "Баланс: 1 480 200 UZS",
+        "buyKw": "Купить"
     },
     "features": {
         "label": "ПРЕИМУЩЕСТВА",

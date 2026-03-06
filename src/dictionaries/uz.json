@@ -19,7 +19,14 @@
         "stat1Value": "+ 42%",
         "stat2Label": "Yangi mijozlar",
         "stat2Value": "+ 128",
-        "stationOnline": "✅ Stansiya onlayn"
+        "stationOnline": "✅ Stansiya onlayn",
+        "tag1": "Charge-One ga qo'shing",
+        "tag2": "Stansiyangizni o'rnating",
+        "tag3": "Har bir quvvatlashdan daromad oling",
+        "appStore": "App Store",
+        "googlePlay": "Google Play",
+        "balance": "Balans: 1 480 200 UZS",
+        "buyKw": "Sotib olish"
     },
     "features": {
         "label": "AFZALLIKLAR",

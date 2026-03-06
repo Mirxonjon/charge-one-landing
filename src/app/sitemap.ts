@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { i18n } from '@/i18n/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://charge-one.com';
+    const baseUrl = 'https://charge-one.uz';
     const lastModified = new Date();
 
     // Create sitemap entries for all locales and core pages

@@ -19,7 +19,14 @@
         "stat1Value": "+ 42%",
         "stat2Label": "New Clients",
         "stat2Value": "+ 128",
-        "stationOnline": "✅ Station Online"
+        "stationOnline": "✅ Station Online",
+        "tag1": "Add it to Charge-One",
+        "tag2": "Install your charging station",
+        "tag3": "Receive payments after each charging",
+        "appStore": "App Store",
+        "googlePlay": "Google Play",
+        "balance": "Balance: 1 480 200 UZS",
+        "buyKw": "Buy"
     },
     "features": {
         "label": "ADVANTAGES",
