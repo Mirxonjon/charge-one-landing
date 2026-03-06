@@ -26,7 +26,15 @@
         "appStore": "App Store",
         "googlePlay": "Google Play",
         "balance": "Balance: 1 480 200 UZS",
-        "buyKw": "Buy"
+        "buyKw": "Buy",
+        "incomeTitle": "Monthly passive income",
+        "incomeValue": "15 400 000 UZS",
+        "incomeGrowth": "+42% growth",
+        "stationStatus": "Stations status",
+        "statusOnline": "Online",
+        "statusCharging": "Charging",
+        "tagAuto": "100% Automated",
+        "tagProfit": "Fast ROI"
     },
     "features": {
         "label": "ADVANTAGES",

@@ -26,7 +26,15 @@
         "appStore": "App Store",
         "googlePlay": "Google Play",
         "balance": "Баланс: 1 480 200 UZS",
-        "buyKw": "Купить"
+        "buyKw": "Купить",
+        "incomeTitle": "Ежемесячный пассивный доход",
+        "incomeValue": "15 400 000 UZS",
+        "incomeGrowth": "+42% рост",
+        "stationStatus": "Статус станций",
+        "statusOnline": "Онлайн",
+        "statusCharging": "Заряжается",
+        "tagAuto": "100% Автоматизировано",
+        "tagProfit": "Быстрый ROI"
     },
     "features": {
         "label": "ПРЕИМУЩЕСТВА",

@@ -5,6 +5,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import styles from './Header.module.css';
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const languages = [
     { code: 'uz', name: "O'zbek" },
@@ -34,8 +35,7 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
         <header className={styles.header}>
             <div className={`container ${styles.headerContainer}`}>
                 <Link href={`/${lang}`} className={styles.logo}>
-                    <div className={styles.logoIcon}></div>
-                    <span className={styles.logoText}>Charge-One</span>
+                    <Image src="/logo.png" alt="Charge-One Logo" width={140} height={35} priority />
                 </Link>
 
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>

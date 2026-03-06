@@ -60,68 +60,140 @@ export default function Hero({ dict }: { dict: any }) {
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     <div className={styles.phoneMockup}>
+                        {/* Hardware Details */}
+                        <div className={styles.statusBar}>
+                            <span className={styles.time}>9:41</span>
+                            <div className={styles.dynamicIsland}>
+                                <div className={styles.camera}></div>
+                            </div>
+                            <div className={styles.statusIcons}>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M21 12.5v9a.5.5 0 01-.5.5H18a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h2.5a.5.5 0 01.5.5zM15.5 15.5v6a.5.5 0 01-.5.5H12.5a.5.5 0 01-.5-.5v-6a.5.5 0 01.5-.5h2.5a.5.5 0 01.5.5zM10 18.5v3a.5.5 0 01-.5.5H7.5a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5h2.5a.5.5 0 01.5.5zM4.5 21.5v0a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v0a.5.5 0 01.5-.5h2.5a.5.5 0 01.5.5z" /></svg>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6zM5 6v12h14V6H5z" fill="white" /><rect x="2" y="7" width="16" height="10" rx="1" fill="white" /><path d="M22 10v4h2v-4h-2z" fill="white" /></svg>
+                            </div>
+                        </div>
+
                         <div className={styles.phoneScreen}>
-                            <div className={styles.mapBg}></div>
-                            <div className={styles.mapPin1}>
-                                <Zap size={14} color="white" />
-                            </div>
-                            <div className={styles.mapPin2}>
-                                <Zap size={14} color="white" />
-                            </div>
-                            <div className={styles.mapPin3}>
-                                <Zap size={14} color="white" />
-                            </div>
-
-                            <div className={styles.topBar}>
-                                <div className={styles.balanceTag}>
-                                    <div className={styles.walletIcon}></div>
-                                    <span>{dict.hero.balance}</span>
+                            {/* Inner Dashboard UI */}
+                            <div className={styles.appHeader}>
+                                <div>
+                                    <h4 className={styles.greeting}>Charge-One</h4>
+                                    <h3 className={styles.userName}>Boshqaruv Paneli</h3>
                                 </div>
-                                <div className={styles.profileIcon}></div>
+                                <div className={styles.avatar}>
+                                    <Zap size={16} color="white" />
+                                </div>
+                            </div>
+
+                            <div className={styles.balanceCard}>
+                                <p className={styles.balanceLabel}>Jami tushumlar</p>
+                                <h1 className={styles.balanceValue}>14 802 <span className={styles.currency}>k UZS</span></h1>
+                                <div className={styles.chartPlaceholder}>
+                                    <svg viewBox="-5 -5 210 60" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
+                                        <path d="M0,45 Q20,35 40,40 T80,25 T120,30 T160,15 T200,5 L200,50 L0,50 Z" fill="rgba(34,197,94,0.15)" />
+                                        <path d="M0,45 Q20,35 40,40 T80,25 T120,30 T160,15 T200,5" fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                                        <circle cx="200" cy="5" r="4" fill="#4ade80" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className={styles.sectionTitle}>Faol tranzaksiyalar</div>
+                            <div className={styles.activityList}>
+                                <div className={styles.activityItem}>
+                                    <div className={styles.activityIcon} style={{ background: 'rgba(59, 130, 246, 0.2)', color: '#60a5fa' }}>
+                                        <Zap size={16} />
+                                    </div>
+                                    <div className={styles.activityInfo}>
+                                        <p>ZTY - 120kWt</p>
+                                        <span>Quvvatlanmoqda (68%)</span>
+                                    </div>
+                                    <div className={styles.activityAmountBlue}>+24k</div>
+                                </div>
+                                <div className={styles.activityItem}>
+                                    <div className={styles.activityIcon} style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#4ade80' }}>
+                                        <Zap size={16} />
+                                    </div>
+                                    <div className={styles.activityInfo}>
+                                        <p>Tokbor #1</p>
+                                        <span>Yakunlandi (2 soat oldin)</span>
+                                    </div>
+                                    <div className={styles.activityAmountGreen}>+12k</div>
+                                </div>
+                            </div>
+
+                            <div className={styles.gridStats}>
+                                <div className={styles.gridStat}>
+                                    <span className={styles.statVal}>84</span>
+                                    <span className={styles.statLab}>Faol stansiya</span>
+                                </div>
+                                <div className={styles.gridStat}>
+                                    <span className={styles.statVal}>99%</span>
+                                    <span className={styles.statLab}>Barqarorlik</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Floating tags like BEON */}
-                    <div className={styles.floatingTag1}>
-                        <div className={styles.tagNum1}>1</div>
-                        <span>{dict.hero.tag1}</span>
-                    </div>
-
-                    <div className={styles.floatingTag2}>
-                        <div className={styles.tagNum2}>2</div>
-                        <span>{dict.hero.tag2}</span>
-                    </div>
-
-                    <div className={styles.floatingTag3}>
-                        <div className={styles.tagNum3}>3</div>
-                        <span>{dict.hero.tag3}</span>
-                    </div>
-
-                    {/* Dark Glass Card (Tesla model X simulation) */}
-                    <div className={styles.teslaCard}>
-                        <div className={styles.cardHeader}>
-                            <span>Tesla Model X</span>
-                            <div className={styles.settingsIcon}></div>
+                    {/* Income Dashboard Card (Top Left) */}
+                    <div className={`${styles.glassWidget} ${styles.incomeWidget}`}>
+                        <div className={styles.widgetHeader}>
+                            <div className={styles.iconCircleBlue}>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                            </div>
+                            <span>{dict.hero.incomeTitle}</span>
                         </div>
-                        <div className={styles.carImagePlaceholder}></div>
-                        <div className={styles.carStats}>
-                            <div>76%</div>
-                            <div>560 km</div>
-                            <div>2 h 30 m</div>
+                        <div className={styles.incomeMetrics}>
+                            <div className={styles.incomeAmount}>{dict.hero.incomeValue}</div>
+                            <div className={styles.incomeBadge}>{dict.hero.incomeGrowth}</div>
+                        </div>
+                        {/* Mini Chart SVG */}
+                        <div className={styles.miniChart}>
+                            <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 T200,5 L200,60 L0,60 Z" fill="rgba(34,197,94,0.1)" />
+                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 T200,5" fill="none" stroke="#22c55e" strokeWidth="3" />
+                            </svg>
                         </div>
                     </div>
 
-                    <div className={styles.paymentCard}>
-                        <div className={styles.paymentHeader}>
-                            <Zap size={16} color="#f59e0b" />
-                            <span>1200 кВт</span>
+                    {/* Station Status Card (Bottom Right) */}
+                    <div className={`${styles.glassWidget} ${styles.statusWidget}`}>
+                        <div className={styles.widgetHeader}>
+                            <div className={styles.iconCirclePurple}>
+                                <Zap size={18} color="white" />
+                            </div>
+                            <span>{dict.hero.stationStatus}</span>
                         </div>
-                        <div className={styles.progressRow}>
-                            <span>1 200 000 UZS</span>
-                            <span className={styles.progressMinus}>-280 000 UZS</span>
+                        <div className={styles.statusList}>
+                            <div className={styles.statusRow}>
+                                <div className={styles.statusDotGreen}></div>
+                                <span className={styles.stationName}>Tokbor #1</span>
+                                <span className={styles.stationState}>{dict.hero.statusOnline}</span>
+                            </div>
+                            <div className={styles.statusRow}>
+                                <div className={styles.statusDotBlue}></div>
+                                <span className={styles.stationName}>ZTY - 120kWt</span>
+                                <span className={styles.stationState}>{dict.hero.statusCharging}</span>
+                            </div>
+                            <div className={styles.statusRow}>
+                                <div className={styles.statusDotGreen}></div>
+                                <span className={styles.stationName}>Voltauto</span>
+                                <span className={styles.stationState}>{dict.hero.statusOnline}</span>
+                            </div>
                         </div>
-                        <button className={styles.buyBtn}>{dict.hero.buyKw}</button>
+                    </div>
+
+                    {/* Floating mini-badges */}
+                    <div className={`${styles.miniPill} ${styles.pillAuto}`}>
+                        <div className={styles.pillIconTeal}>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                        </div>
+                        {dict.hero.tagAuto}
+                    </div>
+
+                    <div className={`${styles.miniPill} ${styles.pillProfit}`}>
+                        <div className={styles.pillIconOrange}>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                        </div>
+                        {dict.hero.tagProfit}
                     </div>
 
                 </motion.div>

@@ -26,7 +26,15 @@
         "appStore": "App Store",
         "googlePlay": "Google Play",
         "balance": "Balans: 1 480 200 UZS",
-        "buyKw": "Sotib olish"
+        "buyKw": "Sotib olish",
+        "incomeTitle": "Oylik passiv daromad",
+        "incomeValue": "15 400 000 UZS",
+        "incomeGrowth": "+42% o'sish",
+        "stationStatus": "Stansiyalar holati",
+        "statusOnline": "Onlayn",
+        "statusCharging": "Quvvatlamoqda",
+        "tagAuto": "100% Avtomatlashtirilgan",
+        "tagProfit": "Tezkor qoplash (ROI)"
     },
     "features": {
         "label": "AFZALLIKLAR",

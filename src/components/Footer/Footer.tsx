@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Instagram, Send, MoveUpRight, MapPin, Phone, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
@@ -9,8 +10,7 @@ export default function Footer({ dict }: { dict: any }) {
                 <div className={styles.footerTop}>
                     <div className={styles.brandCol}>
                         <Link href="/" className={styles.logo}>
-                            <div className={styles.logoIcon}></div>
-                            <span className={styles.logoText}>Charge-One</span>
+                            <Image src="/logo.png" alt="Charge-One Logo" width={140} height={35} />
                         </Link>
                         <p className={styles.brandDesc}>
                             {dict.footer.desc}
