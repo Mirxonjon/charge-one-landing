@@ -38,6 +38,10 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
                     <img src="/logo.png" alt="Charge One Logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
                 </Link>
 
+                {/* Mobile Menu Backdrop */}
+                {isMenuOpen && (
+                    <div className={styles.overlay} onClick={() => setIsMenuOpen(false)}></div>
+                )}
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
                     <Link href={`/${lang}#advantages`} className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{dict.nav.advantages}</Link>
                     <Link href={`/${lang}#clients`} className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{dict.nav.clients}</Link>
@@ -46,8 +50,6 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
                 </nav>
 
                 <div className={styles.actions}>
-                    <button className={styles.loginBtn}>{dict.nav.login}</button>
-
                     <div className={styles.langSelector}>
                         <button className={styles.langBtn} onClick={() => setIsLangOpen(!isLangOpen)}>
                             <Globe size={16} /> <span>{currentLang}</span>

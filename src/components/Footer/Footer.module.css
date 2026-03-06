@@ -27,7 +27,7 @@
 }
 
 .appPromoContent {
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .promoTitle {
@@ -43,9 +43,60 @@
     line-height: 1.6;
 }
 
+.promoActions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.promoForm {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.promoInput {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+.promoInput:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.promoInput::placeholder {
+    color: #64748b;
+}
+
+.promoSubmitBtn {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.promoSubmitBtn:hover {
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-glow);
+}
+
 .storeButtons {
     display: flex;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
 .storeBtn {
@@ -242,6 +293,10 @@
         gap: 2rem;
         padding: 2.5rem;
     }
+
+    .promoActions {
+        align-items: center;
+    }
 }
 
 @media (max-width: 640px) {
@@ -255,6 +310,16 @@
 
     .promoTitle {
         font-size: 1.5rem;
+    }
+
+    .promoForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .promoInput,
+    .promoSubmitBtn {
+        width: 100%;
     }
 
     .storeButtons {
