@@ -35,7 +35,7 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
         <header className={styles.header}>
             <div className={`container ${styles.headerContainer}`}>
                 <Link href={`/${lang}`} className={styles.logo}>
-                    <img src="/logo.png" alt="Charge-One Logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
+                    <img src="/logo.png" alt="Charge One Logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
                 </Link>
 
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>

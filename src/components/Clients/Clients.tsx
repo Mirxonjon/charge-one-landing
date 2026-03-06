@@ -82,7 +82,7 @@ export default function Clients({ dict }: { dict: any }) {
                                     {/* Bottom Sheet */}
                                     <div className={styles.bottomSheet}>
                                         <div className={styles.sheetHandle}></div>
-                                        <div className={styles.sheetTitle}>Charge-One Station #42</div>
+                                        <div className={styles.sheetTitle}>Charge One Station #42</div>
                                         <div className={styles.sheetSubtitle}>{dict.clients.mockSubtitle}</div>
                                         <div className={styles.connectors}>
                                             <div className={styles.connector}>

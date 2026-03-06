@@ -76,7 +76,7 @@ export default function Hero({ dict }: { dict: any }) {
                             {/* Inner Dashboard UI */}
                             <div className={styles.appHeader}>
                                 <div>
-                                    <h4 className={styles.greeting}>Charge-One</h4>
+                                    <h4 className={styles.greeting}>Charge One</h4>
                                     <h3 className={styles.userName}>Boshqaruv Paneli</h3>
                                 </div>
                                 <div className={styles.avatar}>
@@ -147,9 +147,9 @@ export default function Hero({ dict }: { dict: any }) {
                         </div>
                         {/* Mini Chart SVG */}
                         <div className={styles.miniChart}>
-                            <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 T200,5 L200,60 L0,60 Z" fill="rgba(34,197,94,0.1)" />
-                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 T200,5" fill="none" stroke="#22c55e" strokeWidth="3" />
+                            <svg viewBox="0 0 200 60" preserveAspectRatio="none" style={{ width: '100%', height: '100%', display: 'block' }}>
+                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 Q180,10 200,5 L200,60 L0,60 Z" fill="rgba(34,197,94,0.1)" />
+                                <path d="M0,50 Q20,40 40,45 T80,30 T120,35 T160,15 Q180,10 200,5" fill="none" stroke="#22c55e" strokeWidth="3" />
                             </svg>
                         </div>
                     </div>

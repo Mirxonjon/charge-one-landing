@@ -33,7 +33,7 @@ export default function Footer({ dict }: { dict: any }) {
                 <div className={styles.footerTop}>
                     <div className={styles.brandCol}>
                         <Link href="/" className={styles.logo}>
-                            <img src="/logo.png" alt="Charge-One Logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
+                            <img src="/logo.png" alt="Charge One Logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
                         </Link>
                         <p className={styles.brandDesc}>
                             {dict.footer.desc}
