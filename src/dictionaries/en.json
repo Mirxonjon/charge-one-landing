@@ -102,6 +102,10 @@
         "terms": "Terms of Use",
         "offer": "Public Offer",
         "requisites": "Requisites",
-        "rights": "Charge-One. All rights reserved."
+        "rights": "Charge-One. All rights reserved.",
+        "downloadApp": "Download our mobile app!",
+        "downloadDesc": "Convenient payment, fast charging, and 24/7 support right on your phone.",
+        "appStore": "Download on the App Store",
+        "googlePlay": "Get it on Google Play"
     }
 }

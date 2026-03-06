@@ -102,6 +102,10 @@
         "terms": "Foydalanish shartlari",
         "offer": "Ommaviy oferta",
         "requisites": "Rekvizitlar",
-        "rights": "Charge-One. Barcha huquqlar himoyalangan."
+        "rights": "Charge-One. Barcha huquqlar himoyalangan.",
+        "downloadApp": "Mobil ilovamizni yuklab oling!",
+        "downloadDesc": "Qulay to'lov, tezkor quvvatlash va 24/7 qo'llab-quvvatlash tizimi smartfoningizda.",
+        "appStore": "App Store dan yuklab oling",
+        "googlePlay": "Google Play dan yuklab oling"
     }
 }

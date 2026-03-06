@@ -13,6 +13,76 @@
     margin-bottom: 4rem;
 }
 
+/* Modern App Promo Banner */
+.appPromo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.appPromoContent {
+    max-width: 500px;
+}
+
+.promoTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.promoDesc {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.storeButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.storeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: white;
+    color: #000;
+    /* Rich black */
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    /* Perfect pill shape */
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 140px;
+}
+
+.storeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.storeIcon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.btnTextSimple {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+}
+
 .brandCol {
     display: flex;
     flex-direction: column;
@@ -76,44 +146,59 @@
     transform: translateY(-3px);
 }
 
-.linksTitle {
-    font-size: 1.125rem;
-    font-weight: 600;
+.colTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     color: white;
+    letter-spacing: 0.02em;
 }
 
-.linksList {
+.linkList {
     list-style: none;
+    /* Make absolutely sure no standard UL dots appear */
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.linksList a {
-    color: #94a3b8;
-    font-size: 0.9375rem;
+.linkList a {
+    color: #cbd5e1;
+    /* Lighter text for better contrast */
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: var(--transition);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.linksList a:hover {
+.linkList a:hover {
     color: var(--primary);
-    padding-left: 0.25rem;
+    transform: translateX(4px);
 }
 
 .contactList {
     list-style: none;
+    /* Removes bullets from unordered list */
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .contactList li {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    color: #94a3b8;
-    font-size: 0.9375rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .contactList a {
@@ -150,11 +235,35 @@
     .footerTop {
         grid-template-columns: 1fr 1fr;
     }
+
+    .appPromo {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2.5rem;
+    }
 }
 
 @media (max-width: 640px) {
     .footerTop {
         grid-template-columns: 1fr;
+    }
+
+    .appPromo {
+        padding: 2rem 1.5rem;
+    }
+
+    .promoTitle {
+        font-size: 1.5rem;
+    }
+
+    .storeButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .storeBtn {
+        justify-content: center;
     }
 
     .footerBottom {
