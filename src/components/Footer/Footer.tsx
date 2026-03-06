@@ -33,6 +33,7 @@ export default function Footer({ dict }: { dict: any }) {
                     </div>
 
                     <div className={styles.promoActions}>
+                        <h4 className={styles.promoFormTitle}>Biz bilan bog'laning</h4>
                         {/* Application Form */}
                         <form className={styles.promoForm} onSubmit={(e) => e.preventDefault()}>
                             <input type="text" placeholder="Ism familiya" className={styles.promoInput} required />
