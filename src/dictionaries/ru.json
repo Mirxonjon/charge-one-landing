@@ -65,7 +65,14 @@
         "mockBalanceTitle": "Spectre",
         "mockBalanceDesc": "Баланс: 150 000 UZS",
         "mockSupportTitle": "Служба поддержки",
-        "mockSupportDesc": "Вам ответили в чате"
+        "mockSupportDesc": "Вам ответили в чате",
+        "contactTitle": "Свяжитесь с нами",
+        "contactName": "Имя фамилия",
+        "contactPhone": "+998",
+        "contactSubmit": "Отправить",
+        "contactSubmitting": "Отправка...",
+        "contactSuccess": "Отправлено ✓",
+        "contactError": "Пожалуйста, введите полный номер телефона Узбекистана (пример: +998901234567)"
     },
     "partners": {
         "label": "ПАРТНЕРСТВО",

@@ -65,7 +65,14 @@
         "mockBalanceTitle": "Spectre",
         "mockBalanceDesc": "Balance: 150 000 UZS",
         "mockSupportTitle": "Support Service",
-        "mockSupportDesc": "Support answered in chat"
+        "mockSupportDesc": "Support answered in chat",
+        "contactTitle": "Contact Us",
+        "contactName": "Full Name",
+        "contactPhone": "+998",
+        "contactSubmit": "Submit",
+        "contactSubmitting": "Submitting...",
+        "contactSuccess": "Sent ✓",
+        "contactError": "Please enter a full Uzbekistan phone number (e.g.: +998901234567)"
     },
     "partners": {
         "label": "PARTNERSHIP",

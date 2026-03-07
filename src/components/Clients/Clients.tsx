@@ -56,7 +56,7 @@ export default function Clients({ dict }: { dict: any }) {
 
         // Must be exactly 13 chars: +998 and 9 digits
         if (phone.length !== 13) {
-            alert("Iltimos, telefon raqamni to'liq kiriting (masalan: +998901234567)");
+            alert(dict.clients.contactError);
             return;
         }
 
@@ -150,12 +150,12 @@ export default function Clients({ dict }: { dict: any }) {
                         transition={{ duration: 0.8 }}
                     >
                         <div className={styles.contactFormContainer}>
-                            <h3 className={styles.contactFormTitle}>Biz bilan bog'laning</h3>
+                            <h3 className={styles.contactFormTitle}>{dict.clients.contactTitle}</h3>
                             <form className={styles.contactForm} onSubmit={handleSubmit}>
-                                <input type="text" placeholder="Ism familiya" className={styles.contactInput} value={name} onChange={(e) => setName(e.target.value)} required />
+                                <input type="text" placeholder={dict.clients.contactName} className={styles.contactInput} value={name} onChange={(e) => setName(e.target.value)} required />
                                 <input
                                     type="tel"
-                                    placeholder="+998"
+                                    placeholder={dict.clients.contactPhone}
                                     className={styles.contactInput}
                                     value={phone}
                                     onChange={handlePhoneChange}
@@ -163,7 +163,7 @@ export default function Clients({ dict }: { dict: any }) {
                                     required
                                 />
                                 <button type="submit" className={styles.contactSubmitBtn} disabled={isSubmitting} style={isSuccess ? { backgroundColor: '#22c55e' } : {}}>
-                                    {isSubmitting ? "Yuborilmoqda..." : isSuccess ? "Yuborildi ✓" : "Yuborish"}
+                                    {isSubmitting ? dict.clients.contactSubmitting : isSuccess ? dict.clients.contactSuccess : dict.clients.contactSubmit}
                                 </button>
                             </form>
                         </div>

@@ -65,7 +65,14 @@
         "mockBalanceTitle": "Spectre",
         "mockBalanceDesc": "Balans: 150 000 UZS",
         "mockSupportTitle": "Qo'llab-quvvatlash",
-        "mockSupportDesc": "Sizga chatda javob berishdi"
+        "mockSupportDesc": "Sizga chatda javob berishdi",
+        "contactTitle": "Biz bilan bog'laning",
+        "contactName": "Ism familiya",
+        "contactPhone": "+998",
+        "contactSubmit": "Yuborish",
+        "contactSubmitting": "Yuborilmoqda...",
+        "contactSuccess": "Yuborildi ✓",
+        "contactError": "Iltimos, O'zbekiston telefon raqamini to'liq kiriting (masalan: +998901234567)"
     },
     "partners": {
         "label": "HAMKORLIK",
