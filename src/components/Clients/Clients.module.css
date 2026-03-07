@@ -93,259 +93,65 @@
     align-items: center;
 }
 
-.phoneMockup {
-    position: relative;
-    width: 300px;
-    height: 600px;
-}
-
-.phoneFrame {
-    position: relative;
+.contactFormContainer {
+    background-color: var(--surface);
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
     width: 100%;
-    height: 100%;
-    background-color: #111;
-    border-radius: 40px;
-    border: 12px solid #e5e7eb;
-    /* Silver border */
-    box-shadow: inset 0 0 0 2px #000, var(--shadow-lg);
-    overflow: hidden;
+    max-width: 450px;
 }
 
-.phoneNotch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 25px;
-    background-color: #000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    z-index: 10;
-}
-
-.phoneScreen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #f3f4f6;
-    display: flex;
-    flex-direction: column;
-}
-
-.mapBg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background-image:
-        radial-gradient(#cbd5e1 1px, transparent 1px),
-        radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-position: 0 0, 10px 10px;
-    background-size: 20px 20px;
-    opacity: 0.5;
-}
-
-.mapPin {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.pinDot {
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    border: 3px solid white;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.pinPulse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    opacity: 0.3;
-    z-index: 1;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0;
-    }
-}
-
-.bottomSheet {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: white;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    padding: 1.5rem;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.sheetHandle {
-    width: 40px;
-    height: 4px;
-    background-color: #e5e7eb;
-    border-radius: 2px;
-    margin: 0 auto 1rem;
-}
-
-.sheetTitle {
+.contactFormTitle {
+    font-size: 1.75rem;
     font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    text-align: center;
 }
 
-.sheetSubtitle {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-}
-
-.connectors {
-    flex-grow: 1;
-}
-
-.connector {
+.contactForm {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contactInput {
+    width: 100%;
+    padding: 1rem 1.25rem;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    font-size: 1rem;
+    color: var(--text-main);
+    background-color: var(--background);
+    transition: var(--transition);
+    outline: none;
 }
 
-.connIcon {
-    width: 32px;
-    height: 32px;
-    background-color: #f3f4f6;
-    border-radius: 50%;
+.contactInput:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(73, 203, 101, 0.2);
 }
 
-.connInfo {
-    flex-grow: 1;
-}
-
-.connType {
-    font-weight: 600;
-    font-size: 0.875rem;
-}
-
-.connPower {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-
-.connStatus {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--primary);
-    background-color: var(--primary-light);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-}
-
-.chargeBtn {
+.contactSubmitBtn {
     width: 100%;
+    padding: 1.125rem;
     background-color: var(--primary);
     color: white;
-    padding: 1rem;
-    border-radius: var(--radius-lg);
     font-weight: 600;
+    font-size: 1.125rem;
     border: none;
-    margin-top: 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
 }
 
-/* Floating Elements */
-.floatElement1 {
-    position: absolute;
-    top: 15%;
-    right: -60px;
-    background-color: white;
-    padding: 1rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 10;
-    width: 220px;
-}
-
-.floatIcon {
-    width: 32px;
-    height: 32px;
-    background-color: var(--primary-light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.floatElement2 {
-    position: absolute;
-    bottom: 30%;
-    left: -80px;
-    background-color: white;
-    padding: 1rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 10;
-    width: 240px;
-}
-
-.avatarMock {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    border-radius: 50%;
-}
-
-.floatTitle {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: var(--text-main);
-}
-
-.floatDesc {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-
-@media (max-width: 1024px) {
-
-    .floatElement1,
-    .floatElement2 {
-        display: none;
-        /* Hide floating elements on smaller screens to prevent overflow */
-    }
+.contactSubmitBtn:hover {
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

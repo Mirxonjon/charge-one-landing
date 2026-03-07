@@ -67,62 +67,13 @@ export default function Clients({ dict }: { dict: any }) {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className={styles.phoneMockup}>
-                            {/* Phone Frame */}
-                            <div className={styles.phoneFrame}>
-                                <div className={styles.phoneNotch}></div>
-                                <div className={styles.phoneScreen}>
-                                    {/* Map UI Mock */}
-                                    <div className={styles.mapBg}></div>
-                                    <div className={styles.mapPin}>
-                                        <div className={styles.pinDot}></div>
-                                        <div className={styles.pinPulse}></div>
-                                    </div>
-
-                                    {/* Bottom Sheet */}
-                                    <div className={styles.bottomSheet}>
-                                        <div className={styles.sheetHandle}></div>
-                                        <div className={styles.sheetTitle}>Charge One Station #42</div>
-                                        <div className={styles.sheetSubtitle}>{dict.clients.mockSubtitle}</div>
-                                        <div className={styles.connectors}>
-                                            <div className={styles.connector}>
-                                                <div className={styles.connIcon}></div>
-                                                <div className={styles.connInfo}>
-                                                    <div className={styles.connType}>GBT DC</div>
-                                                    <div className={styles.connPower}>120 kW</div>
-                                                </div>
-                                                <div className={styles.connStatus}>{dict.clients.mockStatus}</div>
-                                            </div>
-                                        </div>
-                                        <button className={styles.chargeBtn}>{dict.clients.mockBtn}</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Floating UI Elements */}
-                            <motion.div
-                                className={styles.floatElement1}
-                                animate={{ y: [0, -15, 0] }}
-                                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                            >
-                                <div className={styles.floatIcon}><Zap size={16} color="var(--primary)" /></div>
-                                <div className={styles.floatText}>
-                                    <div className={styles.floatTitle}>{dict.clients.mockBalanceTitle}</div>
-                                    <div className={styles.floatDesc}>{dict.clients.mockBalanceDesc}</div>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                className={styles.floatElement2}
-                                animate={{ y: [0, 10, 0] }}
-                                transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 1 }}
-                            >
-                                <div className={styles.avatarMock}></div>
-                                <div className={styles.floatText}>
-                                    <div className={styles.floatTitle}>{dict.clients.mockSupportTitle}</div>
-                                    <div className={styles.floatDesc}>{dict.clients.mockSupportDesc}</div>
-                                </div>
-                            </motion.div>
+                        <div className={styles.contactFormContainer}>
+                            <h3 className={styles.contactFormTitle}>Biz bilan bog'laning</h3>
+                            <form className={styles.contactForm} onSubmit={(e) => e.preventDefault()}>
+                                <input type="text" placeholder="Ism familiya" className={styles.contactInput} required />
+                                <input type="tel" placeholder="Telefon raqami" className={styles.contactInput} required />
+                                <button type="submit" className={styles.contactSubmitBtn}>Yuborish</button>
+                            </form>
                         </div>
                     </motion.div>
                 </div>
