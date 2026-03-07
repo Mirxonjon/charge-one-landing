@@ -1,0 +1,130 @@
+.pageWrapper {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.pageTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.contentCard {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.metaInfo {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: inline-block;
+    width: 100%;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.listItem {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.contactBlock {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: var(--background);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary);
+}
+
+/* Requisites specific */
+.reqGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.reqItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.reqLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reqValue {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.reqValueMono {
+    font-family: monospace;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .pageTitle {
+        font-size: 2.25rem;
+    }
+
+    .contentCard {
+        padding: 2rem;
+    }
+
+    .reqGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
