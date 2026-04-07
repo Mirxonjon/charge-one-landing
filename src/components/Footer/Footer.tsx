@@ -84,7 +84,7 @@ export default function Footer({ dict }: { dict: any }) {
                             </li>
                             <li>
                                 <Mail size={18} className={styles.contactIcon} />
-                                <a href="mailto:support@cahrge-one.com">support@cahrge-one.com</a>
+                                <a href="mailto:support@charge-one.com">support@charge-one.com</a>
                             </li>
                         </ul>
                     </div>
