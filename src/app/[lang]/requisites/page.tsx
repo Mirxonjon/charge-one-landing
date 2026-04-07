@@ -44,8 +44,8 @@ export default async function RequisitesPage({ params: { lang } }: { params: { l
 
                         <div className={styles.reqItem}>
                             <h3 className={styles.reqLabel}>Aloqa ma'lumotlari:</h3>
-                            <p className={styles.reqValue}>Tel: +998 (99) 000-00-00</p>
-                            <p className={styles.reqValue} style={{ marginTop: '0.25rem' }}>Email: info@charge-one.com</p>
+                            <p className={styles.reqValue}>Tel: +998 90 099 39 36</p>
+                            <p className={styles.reqValue} style={{ marginTop: '0.25rem' }}>Email: support@cahrge-one.com</p>
                         </div>
                     </div>
                 </div>

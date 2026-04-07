@@ -80,11 +80,11 @@ export default function Footer({ dict }: { dict: any }) {
                             </li>
                             <li>
                                 <Phone size={18} className={styles.contactIcon} />
-                                <a href="tel:+998990000000">+998 (99) 000-00-00</a>
+                                <a href="tel:+998900993936">+998 90 099 39 36</a>
                             </li>
                             <li>
                                 <Mail size={18} className={styles.contactIcon} />
-                                <a href="mailto:info@charge-one.com">info@charge-one.com</a>
+                                <a href="mailto:support@cahrge-one.com">support@cahrge-one.com</a>
                             </li>
                         </ul>
                     </div>

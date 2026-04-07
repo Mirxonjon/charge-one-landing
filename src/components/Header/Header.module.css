@@ -166,10 +166,23 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        overflow-x: clip; /* Prevent horizontal scroll from nav transition */
+    }
+
+    .headerContainer {
+        padding: 0 1rem;
+        height: 64px;
+    }
+
+    .logo img {
+        height: 28px !important;
+    }
+
     .overlay {
         display: block;
         position: fixed;
-        top: 72px;
+        top: 64px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -190,12 +203,11 @@
     }
 
     .nav {
-        position: absolute;
-        top: calc(100% + 10px);
-        /* Just below the header */
+        position: fixed;
+        top: 74px;
         left: 1rem;
         right: 1rem;
-        width: auto;
+        width: calc(100% - 2rem);
         height: auto;
         background-color: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(12px);
@@ -203,7 +215,7 @@
         padding: 1.5rem;
         gap: 1.5rem;
         border-radius: 16px;
-        transform: translateX(50px);
+        transform: translateY(-20px);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -213,7 +225,7 @@
     }
 
     .navOpen {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
@@ -224,5 +236,7 @@
 
     .mobileMenuBtn {
         display: block;
+        padding: 0.5rem;
+        margin-right: -0.5rem;
     }
 }
